@@ -11,7 +11,7 @@ inputs:
   output:
     description: 'output folder'
     required: true
-uns:
+runs:
   using: 'docker'
   image: 'Dockerfile'
   args:
