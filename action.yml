@@ -1,0 +1,19 @@
+name: 'coprocessor binary build'
+description: 'builds binary for balena fin coprocessor'
+author: 'balena'
+branding:
+  icon: alert-circle
+  color: blue
+inputs:
+  project:
+    description: 'input folder'
+    required: true
+  output:
+    description: 'output folder'
+    required: true
+uns:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.project }}
+    - ${{ inputs.output }}
